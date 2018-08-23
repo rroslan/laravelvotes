@@ -37,6 +37,6 @@ return [
     'facebook' => [
         'client_id' => '549843195427909',
         'client_secret' => 'cf919e95f6914aaf8e9d054ea3b4dec1',
-        'redirect' => 'https://www.eastservices.biz/callback',
+    'redirect' => 'https://www.eastservices.biz/callback',
     ]
 ];
