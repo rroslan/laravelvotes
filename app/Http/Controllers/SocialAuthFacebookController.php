@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Services\SocialFacebookAccountService;
 use Illuminate\Http\Request;
 use Socialite;
 class SocialAuthFacebookController extends Controller
