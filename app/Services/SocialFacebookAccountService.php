@@ -7,6 +7,10 @@ use Laravel\Socialite\Contracts\User as ProviderUser;
 
 class SocialFacebookAccountService
 {
+    /**
+     * @param ProviderUser $providerUser
+     * @return mixed
+     */
     public function createOrGetUser(ProviderUser $providerUser)
     {
         $account = SocialFacebookAccount::whereProvider('facebook')
@@ -30,7 +34,7 @@ class SocialFacebookAccountService
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
                     'password' => md5(rand(1,10000)),
-                    'avatar' => $providerUser->getAvatar(),
+                    'avatar' => $providerUser->getAvatar()
                     //'facebook_profile' => $providerUser->user['link'],
                     //'gender' => $providerUser->user['gender'],
                 ]);
